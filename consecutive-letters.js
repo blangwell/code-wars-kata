@@ -72,14 +72,13 @@ function solve(str) {
     if (charCode in charCount) return false;
     else charCount[charCode] = 1
   }
+  
   // create an array from the keys of charCount
   let charArray = Array.from(Object.keys(charCount))
 
   /* loop through the array to check if nums are consecutive
-  start on index one, check if i === i-1 + 1
-  if it doesn't, return false */
+  start on index one, check if i === i-1 + 1 if it doesn't, return false */
   for (let i = 1; i < charArray.length; i++) {
-    console.log(parseInt(charArray[i]))
     if (parseInt(charArray[i]) !== parseInt(charArray[i-1]) + 1) return false
   }
 
