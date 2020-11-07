@@ -1,23 +1,27 @@
 const assert = require('chai').assert;
 const titleCase = require('../title-case');
-const titleCaseNoRegex = require('../title-case');
+const arrayCombine = require('../array-combinations');
+const trumpDetector = require('../trumpness');
 
-describe('titleCase', function() {
-  it('function should capitalize the first character of words', function () {
-    assert.equal(titleCase('hello hello'), 'Hello Hello')
-    assert.equal(titleCase('a good day hello' , 'a good'), 'A good Day Hello')
-  })
-  it('function should ignore words in the wordList', function () {
-    assert.equal(titleCase('hello there', 'there'), 'Hello there')
-  })
-})
-// describe('titleCaseNoRegex', function() {
+// describe('titleCase', function() {
 //   it('function should capitalize the first character of words', function () {
-//     assert.equal(titleCaseNoRegex('hello hello'), 'Hello Hello')
+//     assert.equal(titleCase('hello hello'), 'Hello Hello')
+//     assert.equal(titleCase('a good day hello' , 'a good'), 'A good Day Hello')
 //   })
 //   it('function should ignore words in the wordList', function () {
-//     assert.equal(titleCaseNoRegex('hello there', 'hello'), 'hello There')
+//     assert.equal(titleCase('hello there', 'there'), 'Hello there')
 //   })
 // })
 
+// describe('arrayCombine', function() {
+//   it('function should return number of unique arrays that can be made', function () {
+//     assert.equal(arrayCombine([[1,2],[4],[5,6]]), 4)
+//     assert.equal(arrayCombine([[1,2,3],[3,4,6,6,7],[8,9,10,12,5,6]]), 72)
+//   })
+// })
 
+describe('trumpDetector', function() {
+  it ('function should round up two decimal digits', function() {
+    assert.equal(trumpDetector("America NUUUUUKEEEE Oooobaaaamaaaaa"), 1.89)
+  })
+})
