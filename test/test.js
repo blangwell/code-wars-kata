@@ -2,6 +2,7 @@ const assert = require('chai').assert;
 const titleCase = require('../title-case');
 const arrayCombine = require('../array-combinations');
 const trumpDetector = require('../trumpness');
+const twoSum = require('../twosum');
 
 // describe('titleCase', function() {
 //   it('function should capitalize the first character of words', function () {
@@ -20,8 +21,15 @@ const trumpDetector = require('../trumpness');
 //   })
 // })
 
-describe('trumpDetector', function() {
-  it ('function should round up two decimal digits', function() {
-    assert.equal(trumpDetector("America NUUUUUKEEEE Oooobaaaamaaaaa"), 1.89)
+// describe('trumpDetector', function() {
+//   it ('function should round up two decimal digits', function() {
+//     assert.equal(trumpDetector("America NUUUUUKEEEE Oooobaaaamaaaaa"), 1.89)
+//   })
+// })
+
+describe('twoSum', function () {
+  it ('function should return the indeces that, when summed, produce the target value', function() {
+    // use deepEqual because in js [0,1] == [0,1] is false
+    assert.deepEqual(twoSum([2, 7, 11, 15], 9), [0,1])
   })
 })
