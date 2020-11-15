@@ -1,6 +1,5 @@
 const highLow = (str) => {
   let arr = str.split(' ').map(a => parseInt(a))
-  
   return `${Math.max(...arr)} ${Math.min(...arr)}`
 
   // console.log(arr)

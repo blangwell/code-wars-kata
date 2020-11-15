@@ -6,6 +6,7 @@ const assert = require('chai').assert;
 // const trumpDetector = require('../trumpness');
 // const twoSum = require('../twosum');
 const highLow = require('../highestLowest')
+const findOdd = require('../findOdd')
 
 
 // describe('titleCase', function() {
@@ -41,5 +42,11 @@ const highLow = require('../highestLowest')
 describe('highLow', function() {
   it ('function should return highest and lowest numbers', function() {
     assert.equal(highLow("1 2 -3 4 5"), "5 -3")
+  })
+})
+
+describe('findOdd', function() {
+  it ('function should find array item that appears odd num of times', function() {
+    assert.equal(findOdd([20,1,1,2,2,3,3,5,5,4,20,4,5]), 5)
   })
 })
