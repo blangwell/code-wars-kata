@@ -1,8 +1,12 @@
 const assert = require('chai').assert;
-const titleCase = require('../title-case');
-const arrayCombine = require('../array-combinations');
-const trumpDetector = require('../trumpness');
-const twoSum = require('../twosum');
+
+
+// const titleCase = require('../title-case');
+// const arrayCombine = require('../array-combinations');
+// const trumpDetector = require('../trumpness');
+// const twoSum = require('../twosum');
+const highLow = require('../highestLowest')
+
 
 // describe('titleCase', function() {
 //   it('function should capitalize the first character of words', function () {
@@ -27,9 +31,15 @@ const twoSum = require('../twosum');
 //   })
 // })
 
-describe('twoSum', function () {
-  it ('function should return the indeces that, when summed, produce the target value', function() {
-    // use deepEqual because in js [0,1] == [0,1] is false
-    assert.deepEqual(twoSum([2, 7, 11, 15], 9), [0,1])
+// describe('twoSum', function () {
+//   it ('function should return the indeces that, when summed, produce the target value', function() {
+//     // use deepEqual because in js [0,1] == [0,1] is false
+//     assert.deepEqual(twoSum([2, 7, 11, 15], 9), [0,1])
+//   })
+// })
+
+describe('highLow', function() {
+  it ('function should return highest and lowest numbers', function() {
+    assert.equal(highLow("1 2 -3 4 5"), "5 -3")
   })
 })
