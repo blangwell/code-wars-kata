@@ -12,14 +12,25 @@ function anagram(str1, str2) {
   }
 }
 
-console.log(anagram('hello', 'olleh'))
+// console.log(anagram('hello', 'olleh'))
 
 // submitted solution
+// var isAnagram = function(test, original) {
+//   if (test.length !== original.length) return false;
+  
+//   else {
+//     [test, original] = [test.toLowerCase().split('').sort(), original.toLowerCase().split('').sort()];
+//     return test.every((curr, idx) => curr === original[idx])
+//   }
+// };
+
 var isAnagram = function(test, original) {
   if (test.length !== original.length) return false;
-  
   else {
-    [test, original] = [test.toLowerCase().split('').sort(), original.toLowerCase().split('').sort()];
-    return test.every((curr, idx) => curr === original[idx])
+    test = test.toLowerCase().split('').sort().join();
+    original = original.toLowerCase().split('').sort().join();
+    return test == original
   }
 };
+
+console.log(isAnagram('hello', 'olleh'))
