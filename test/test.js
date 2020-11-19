@@ -5,8 +5,10 @@ const assert = require('chai').assert;
 // const arrayCombine = require('../array-combinations');
 // const trumpDetector = require('../trumpness');
 // const twoSum = require('../twosum');
-const highLow = require('../highestLowest')
-const findOdd = require('../findOdd')
+const highLow = require('../highestLowest');
+const findOdd = require('../findOdd');
+const isSquare = require('../isSquare');
+const persistence = require('../persistence')
 
 
 // describe('titleCase', function() {
@@ -39,14 +41,28 @@ const findOdd = require('../findOdd')
 //   })
 // })
 
-describe('highLow', function() {
-  it ('function should return highest and lowest numbers', function() {
-    assert.equal(highLow("1 2 -3 4 5"), "5 -3")
-  })
-})
+// describe('highLow', function() {
+//   it ('function should return highest and lowest numbers', function() {
+//     assert.equal(highLow("1 2 -3 4 5"), "5 -3")
+//   })
+// })
 
-describe('findOdd', function() {
-  it ('function should find array item that appears odd num of times', function() {
-    assert.equal(findOdd([20,1,1,2,2,3,3,5,5,4,20,4,5]), 5)
+// describe('findOdd', function() {
+//   it ('function should find array item that appears odd num of times', function() {
+//     assert.equal(findOdd([20,1,1,2,2,3,3,5,5,4,20,4,5]), 5)
+//   })
+// })
+
+// describe('isSquare', function() {
+//   it ('function should determine if argument is square number', function() {
+//     assert.equal(isSquare(25), true)
+//     assert.equal(isSquare(3), false)
+//   })
+// })
+
+describe('persistence', function() {
+  this.slow(1000)
+  it ('should return the number of times digits in arg must be multiplied to reach a single digit.', function() {
+    assert.equal(persistence(999), 4)
   })
 })
