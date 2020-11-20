@@ -5,10 +5,10 @@ const assert = require('chai').assert;
 // const arrayCombine = require('../array-combinations');
 // const trumpDetector = require('../trumpness');
 // const twoSum = require('../twosum');
-const highLow = require('../highestLowest');
-const findOdd = require('../findOdd');
-const isSquare = require('../isSquare');
-const persistence = require('../persistence')
+// const highLow = require('../highestLowest');
+// const findOdd = require('../findOdd');
+// const isSquare = require('../isSquare');
+// const persistence = require('../persistence')
 
 
 // describe('titleCase', function() {
@@ -60,9 +60,9 @@ const persistence = require('../persistence')
 //   })
 // })
 
-describe('persistence', function() {
-  this.slow(1000)
-  it ('should return the number of times digits in arg must be multiplied to reach a single digit.', function() {
-    assert.equal(persistence(999), 4)
-  })
-})
+// describe('persistence', function() {
+//   this.slow(1000)
+//   it ('should return the number of times digits in arg must be multiplied to reach a single digit.', function() {
+//     assert.equal(persistence(999), 4)
+//   })
+// })

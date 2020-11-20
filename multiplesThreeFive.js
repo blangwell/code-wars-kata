@@ -14,4 +14,4 @@ function solution(number){
   if (number < 0 || !number) return 0;
   let multiples = [...Array(number).keys()].filter(a => a % 3 === 0 || a % 5 === 0);
   return multiples.reduce((acc, curr) => acc + curr); 
-}
+};
