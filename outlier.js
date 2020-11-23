@@ -50,9 +50,7 @@
 function findOutlier(arr) {
   const even = arr.filter(a => a % 2 === 0);
   const odd = arr.filter(a => a % 2 !== 0);
-
   return even.length === 1 ? even[0] : odd[0]
-
 }
 
 console.log(findOutlier([1, 3, 5, 6, 7]))
