@@ -8,7 +8,18 @@ const assert = require('chai').assert;
 // const highLow = require('../highestLowest');
 // const findOdd = require('../findOdd');
 // const isSquare = require('../isSquare');
-// const persistence = require('../persistence')
+// const persistence = require('../persistence');
+const findOutlier = require('../outlier');
+
+describe('findOutlier', function() {
+  it ('function should return the single even or odd number in array length of 3', function() {
+    assert.equal(findOutlier([1, 2, 3]), 2)
+  })
+  it ('function should return the single even or odd number in an array length > 3', function() {
+    assert.equal(findOutlier([2, 4, 6, 8, 10, 12, 13, 14, 16, 18]), 13)
+  })
+})
+
 
 
 // describe('titleCase', function() {
