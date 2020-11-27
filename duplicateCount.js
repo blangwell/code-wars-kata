@@ -29,14 +29,14 @@ function duplicateCount(str) {
   let tally = 0;
   let hashTable = {};
 
-  [...str.toLowerCase()].forEach(s => {
-      if (hashTable[s] === undefined) hashTable[s] = 1;
-      else hashTable[s]++;
-  })
+  [...str.toLowerCase()].forEach(s => hashTable[s] === undefined ? hashTable[s] = 1 : hashTable[s]++)
 
-  for (let val of Object.values(hashTable)) {
+  Object.values(hashTable).forEach(v => )
     if (val > 1) tally++
-  }
+
+  // for (let val of Object.values(hashTable)) {
+  //   if (val > 1) tally++
+  // }
 
   return tally;
 }
