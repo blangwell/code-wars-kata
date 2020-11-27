@@ -10,33 +10,33 @@ const assert = require('chai').assert;
 // const isSquare = require('../isSquare');
 // const persistence = require('../persistence');
 // const findOutlier = require('../outlier');
-// const duplicateCount = require('../duplicateCount');
+const duplicateCount = require('../duplicateCount');
 const whoLikes = require('../whoLikes');
 
-describe('whoLikes', function() {
-  this.slow(1000)
-  it ('should handle empty array', function() {
-    assert.equal(whoLikes([]), 'no one likes this')
-  })
-  it ('should handle array of length one', function() {
-    assert.equal(whoLikes(['Barent']), 'Barent likes this')
-  })
-  it ('should handle array of length two', function() {
-    assert.equal(whoLikes(['Barent', 'Kimber']), 'Barent and Kimber like this')
-  })
-  it ('should handle array of length three', function() {
-    assert.equal(whoLikes(['Barent', 'Kimber', 'Waffles']), 'Barent, Kimber and Waffles like this')
-  })
-  it ('should handle array of length > 3', function() {
-    assert.equal(whoLikes(['Barent', 'Kimber', 'Waffles', 'Mom']), 'Barent, Kimber and 2 others like this')
-  })
-})
-
-// describe('duplicateCount', function() {
-//   it('return the number of characters that have duplicates', function() {
-//     assert.equal(duplicateCount("aabbcde"), 2)
+// describe('whoLikes', function() {
+//   this.slow(1000)
+//   it ('should handle empty array', function() {
+//     assert.equal(whoLikes([]), 'no one likes this')
+//   })
+//   it ('should handle array of length one', function() {
+//     assert.equal(whoLikes(['Barent']), 'Barent likes this')
+//   })
+//   it ('should handle array of length two', function() {
+//     assert.equal(whoLikes(['Barent', 'Kimber']), 'Barent and Kimber like this')
+//   })
+//   it ('should handle array of length three', function() {
+//     assert.equal(whoLikes(['Barent', 'Kimber', 'Waffles']), 'Barent, Kimber and Waffles like this')
+//   })
+//   it ('should handle array of length > 3', function() {
+//     assert.equal(whoLikes(['Barent', 'Kimber', 'Waffles', 'Mom']), 'Barent, Kimber and 2 others like this')
 //   })
 // })
+
+describe('duplicateCount', function() {
+  it('return the number of characters that have duplicates', function() {
+    assert.equal(duplicateCount("aabbcde"), 2)
+  })
+})
 
 // describe('findOutlier', function() {
 //   it ('function should return the single even or odd number in array length of 3', function() {

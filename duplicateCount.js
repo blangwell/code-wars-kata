@@ -26,19 +26,12 @@
 // }
 
 function duplicateCount(str) {
-  let tally = 0;
-  let hashTable = {};
+  let dupeCount = 0; let chars = {};
 
-  [...str.toLowerCase()].forEach(s => hashTable[s] === undefined ? hashTable[s] = 1 : hashTable[s]++)
-
-  Object.values(hashTable).forEach(v => )
-    if (val > 1) tally++
-
-  // for (let val of Object.values(hashTable)) {
-  //   if (val > 1) tally++
-  // }
-
-  return tally;
+  Array.from(str.toLowerCase()).forEach(s => chars[s] === undefined ? chars[s] = 1 : chars[s]++);
+  for (let val of Object.values(chars)) if (val > 1) dupeCount++;
+  
+  return dupeCount;
 }
 
 duplicateCount('kaz222234ooJOJO')
