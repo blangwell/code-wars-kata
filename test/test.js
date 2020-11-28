@@ -10,8 +10,24 @@ const assert = require('chai').assert;
 // const isSquare = require('../isSquare');
 // const persistence = require('../persistence');
 // const findOutlier = require('../outlier');
-const duplicateCount = require('../duplicateCount');
-const whoLikes = require('../whoLikes');
+// const duplicateCount = require('../duplicateCount');
+// const whoLikes = require('../whoLikes');
+const duplicateEncoder = require('../duplicateEncoder');
+
+describe('duplicateEncoder', function() {
+  it('function should convert unique chars to (', function() {
+    assert.equal(duplicateEncoder('din'), '(((');
+  })
+  it('function should convert duplicate chars to )', function() {
+    assert.equal(duplicateEncoder('recede'), '()()()');
+  })
+  it('function should ignore case when determining duplicates', function() {
+    assert.equal(duplicateEncoder('Success'), ')())())');
+  })
+  it('function should work with symbols as well', function() {
+    assert.equal(duplicateEncoder('(( @'), "))((")
+  })
+})
 
 // describe('whoLikes', function() {
 //   this.slow(1000)
@@ -32,11 +48,11 @@ const whoLikes = require('../whoLikes');
 //   })
 // })
 
-describe('duplicateCount', function() {
-  it('return the number of characters that have duplicates', function() {
-    assert.equal(duplicateCount("aabbcde"), 2)
-  })
-})
+// describe('duplicateCount', function() {
+//   it('return the number of characters that have duplicates', function() {
+//     assert.equal(duplicateCount("aabbcde"), 2)
+//   })
+// })
 
 // describe('findOutlier', function() {
 //   it ('function should return the single even or odd number in array length of 3', function() {
