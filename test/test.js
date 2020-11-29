@@ -1,6 +1,14 @@
 const assert = require('chai').assert;
 
+const partsSums = require('../partsSums')
 
+describe('partsSums', function() {
+  // this.slow(1000);
+  it('function should sum all items in the array', function() {
+    assert.deepEqual(partsSums([1, 2, 3, 4, 5, 6]), [21, 20, 18, 15, 11, 6, 0]);
+  })
+
+})
 // const titleCase = require('../title-case');
 // const arrayCombine = require('../array-combinations');
 // const trumpDetector = require('../trumpness');
@@ -12,22 +20,22 @@ const assert = require('chai').assert;
 // const findOutlier = require('../outlier');
 // const duplicateCount = require('../duplicateCount');
 // const whoLikes = require('../whoLikes');
-const duplicateEncoder = require('../duplicateEncoder');
+// const duplicateEncoder = require('../duplicateEncoder');
 
-describe('duplicateEncoder', function() {
-  it('function should convert unique chars to (', function() {
-    assert.equal(duplicateEncoder('din'), '(((');
-  })
-  it('function should convert duplicate chars to )', function() {
-    assert.equal(duplicateEncoder('recede'), '()()()');
-  })
-  it('function should ignore case when determining duplicates', function() {
-    assert.equal(duplicateEncoder('Success'), ')())())');
-  })
-  it('function should work with symbols as well', function() {
-    assert.equal(duplicateEncoder('(( @'), "))((")
-  })
-})
+// describe('duplicateEncoder', function() {
+//   it('function should convert unique chars to (', function() {
+//     assert.equal(duplicateEncoder('din'), '(((');
+//   })
+//   it('function should convert duplicate chars to )', function() {
+//     assert.equal(duplicateEncoder('recede'), '()()()');
+//   })
+//   it('function should ignore case when determining duplicates', function() {
+//     assert.equal(duplicateEncoder('Success'), ')())())');
+//   })
+//   it('function should work with symbols as well', function() {
+//     assert.equal(duplicateEncoder('(( @'), "))((")
+//   })
+// })
 
 // describe('whoLikes', function() {
 //   this.slow(1000)
