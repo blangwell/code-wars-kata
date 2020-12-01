@@ -1,14 +1,16 @@
 const assert = require('chai').assert;
 
-const partsSums = require('../partsSums')
+const camelCase = require('../camelCase');
 
-describe('partsSums', function() {
-  // this.slow(1000);
-  it('function should sum all items in the array', function() {
-    assert.deepEqual(partsSums([1, 2, 3, 4, 5, 6]), [21, 20, 18, 15, 11, 6, 0]);
+describe('camelCase', function() {
+  it('function should split string on new words', function() {
+    assert.equal(camelCase('helloThere'), 'hello There');
   })
-
 })
+
+
+
+// const partsSums = require('../partsSums')
 // const titleCase = require('../title-case');
 // const arrayCombine = require('../array-combinations');
 // const trumpDetector = require('../trumpness');
@@ -21,6 +23,13 @@ describe('partsSums', function() {
 // const duplicateCount = require('../duplicateCount');
 // const whoLikes = require('../whoLikes');
 // const duplicateEncoder = require('../duplicateEncoder');
+
+// describe('partsSums', function() {
+//   // this.slow(1000);
+//   it('function should sum all items in the array', function() {
+//     assert.deepEqual(partsSums([1, 2, 3, 4, 5, 6]), [21, 20, 18, 15, 11, 6, 0]);
+//   })    
+// })
 
 // describe('duplicateEncoder', function() {
 //   it('function should convert unique chars to (', function() {
