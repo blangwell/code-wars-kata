@@ -4,11 +4,13 @@
 // return -1
 
 exports.findEvenIndex = (arr) => {
-  let mid = Math.floor(arr.length / 2);
-  let low = arr.slice(0, mid).reduce((a, b) => a + b);
-  let high = arr.slice(mid + 1, arr.length).reduce((a, b) => a + b);
-  
-  if (low === high) return mid;
+  for (let i = 0; i < arr.length; i++) {
+    let mid = i;
+    let low = arr.slice(0, mid).reduce((a, b) => a + b, 0);
+    let high = arr.slice(mid + 1, arr.length).reduce((a, b) => a + b, 0);
+    if (low === high) return mid;
+  }
+  return -1;
 };
 
 exports.findEvenIndex([1, 2, 3, 6, 9, 2, 1])
