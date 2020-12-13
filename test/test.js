@@ -1,18 +1,60 @@
 const assert = require('chai').assert;
+const expect = require('chai').expect;
 
-const anagramsList = require('../anagramsList');
 
-describe('anagramsList', function() {
-  it('should return an array', function() {
-    assert.typeOf(anagramsList('racer', ['crazer', 'carer', 'racar', 'caers', 'racer']), 'array');
-  });
-  it('if anagrams present, all should be returned', function() {
-    assert.deepEqual(anagramsList('racer', ['crazer', 'carer', 'racar', 'caers', 'racer']), ['carer', 'racer']);
-  });
-  it('if no anagrams present in array, return empty array', function() {
-    assert.deepEqual(anagramsList('laser', ['lazing', 'lazy',  'lacer']), []);
+const nameSum = require('../authoredKata');
+
+describe('nameSum', function() {
+
+  
+  it('should sum indeces of name charactes', function() {
+    // expect(nameSum('barent')).to.equal(60);
+    assert.equal(nameSum('Barent'), 60)
+  })
+  it('should ignore capital letters', function() {
+    assert.equal(nameSum('KiMbER'), 58)
   })
 })
+
+// const protoRef = require('../prototypeRefresher');
+
+// describe('protoRef', function() {
+//   // it('object should have property', function() {
+//   //   assert.hasAnyKeys(protoRef('game', 'titty'), 'brests');
+//   // });
+//   it('object should have new prototype method', function() {
+//     assert.equal('booger' in protoRef(), true);
+//   });
+//   // it('should utilize new object prototype method', function() {
+//   //   assert.equal(protoRef(),);
+//   // });
+// })
+
+
+// const countBits = require('../countBits');
+
+// describe('countBits', function() {
+//   it('function should return a number', function() {
+//     assert.typeOf(countBits(4), 'number');
+//   });
+//   it('function should count the ones in a binary translation', function() {
+//     assert.equal(countBits(7), 3)
+//   })
+// })
+
+// const anagramsList = require('../anagramsList');
+
+// describe('anagramsList', function() {
+//   it('should return an array', function() {
+//     assert.typeOf(anagramsList('racer', ['crazer', 'carer', 'racar', 'caers', 'racer']), 'array');
+//   });
+//   it('if anagrams present, all should be returned', function() {
+//     assert.deepEqual(anagramsList('racer', ['crazer', 'carer', 'racar', 'caers', 'racer']), ['carer', 'racer']);
+//   });
+//   it('if no anagrams present in array, return empty array', function() {
+//     assert.deepEqual(anagramsList('laser', ['lazing', 'lazy',  'lacer']), []);
+//   });
+// })
 
 // const rgbToHex = require('../rgbToHex');
 

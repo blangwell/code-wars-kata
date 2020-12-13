@@ -1,8 +1,8 @@
 const anagramsList = (word, arr) => {
-  return arr.filter(a => {
-    return a.split('').sort().join('') == word.split('').sort().join('');
-  });
+  word = word.split('').sort().join('');
+  return arr.filter(a => a.split('').sort().join('') == word);
 }
 
+anagramsList('racer', ['crazer', 'carer', 'racar', 'caers', 'racer'])
 
 module.exports = anagramsList;
