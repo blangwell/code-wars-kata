@@ -1,19 +1,33 @@
 const assert = require('chai').assert;
 
-const rgbToHex = require('../rgbToHex');
+const anagramsList = require('../anagramsList');
 
-describe('rgbToHex', function() {
-  it('should return 6 characters', function() {
-    assert.lengthOf(rgbToHex(0, 0, 0), 6);
+describe('anagramsList', function() {
+  it('should return an array', function() {
+    assert.typeOf(anagramsList('racer', ['crazer', 'carer', 'racar', 'caers', 'racer']), 'array');
   });
-  it('should extend 3 characters to 6', function() {
-    assert.equal(rgbToHex(300,255,255), 'FFFFFF')
+  it('if anagrams present, all should be returned', function() {
+    assert.deepEqual(anagramsList('racer', ['crazer', 'carer', 'racar', 'caers', 'racer']), ['carer', 'racer']);
+  });
+  it('if no anagrams present in array, return empty array', function() {
+    assert.deepEqual(anagramsList('laser', ['lazing', 'lazy',  'lacer']), []);
   })
-  it('should round up decimal values', function() {
-    assert.equal(rgbToHex(173,255,47), 'ADFF2F')
-  })
+})
 
-});
+// const rgbToHex = require('../rgbToHex');
+
+// describe('rgbToHex', function() {
+//   it('should return 6 characters', function() {
+//     assert.lengthOf(rgbToHex(0, 0, 0), 6);
+//   });
+//   it('should extend 3 characters to 6', function() {
+//     assert.equal(rgbToHex(300,255,255), 'FFFFFF')
+//   })
+//   it('should round up decimal values', function() {
+//     assert.equal(rgbToHex(173,255,47), 'ADFF2F')
+//   })
+
+// });
 
 // const equalSides = require('../equalSidesOfAnArray');
 
