@@ -1,20 +1,30 @@
 const assert = require('chai').assert;
 const expect = require('chai').expect;
 
+const unpackSausages = require('../sausages');
 
-const nameSum = require('../authoredKata');
+describe('unpackSausages', function() {
+  it('should sort the sausages', function() {
+    assert.equal(unpackSausages([ [ "(-)", "[IIII]", "[))))]" ], [ "IuI", "[llll]" ], [ "[@@@@]", "UwU", "[IlII]" ], [ "IuI", "[))))]", "x" ], [] ]), "I I I I ) ) ) ) l l l l @ @ @ @");
+  })
+  it("does not lay the 5th reward package", function() {
+    assert.strictEqual(unpackSausages([["[IIII]", "[llll]", "[1111]", "[@@@@]", "[||||]", "[║║║║]"]]), "I I I I l l l l 1 1 1 1 @ @ @ @ ║ ║ ║ ║");
+  });
+})
 
-describe('nameSum', function() {
+// const nameSum = require('../authoredKata');
+
+// describe('nameSum', function() {
 
   
-  it('should sum indeces of name charactes', function() {
-    // expect(nameSum('barent')).to.equal(60);
-    assert.equal(nameSum('Barent'), 60)
-  })
-  it('should ignore capital letters', function() {
-    assert.equal(nameSum('KiMbER'), 58)
-  })
-})
+//   it('should sum indeces of name charactes', function() {
+//     // expect(nameSum('barent')).to.equal(60);
+//     assert.equal(nameSum('Barent'), 60)
+//   })
+//   it('should ignore capital letters', function() {
+//     assert.equal(nameSum('KiMbER'), 58)
+//   })
+// })
 
 // const protoRef = require('../prototypeRefresher');
 
