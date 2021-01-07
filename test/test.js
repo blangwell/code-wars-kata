@@ -1,16 +1,24 @@
 const assert = require('chai').assert;
 const expect = require('chai').expect;
 
-const unpackSausages = require('../sausages');
+const cubeSummation = require('../cubeSummation');
 
-describe('unpackSausages', function() {
-  it('should sort the sausages', function() {
-    assert.equal(unpackSausages([ [ "(-)", "[IIII]", "[))))]" ], [ "IuI", "[llll]" ], [ "[@@@@]", "UwU", "[IlII]" ], [ "IuI", "[))))]", "x" ], [] ]), "I I I I ) ) ) ) l l l l @ @ @ @");
+describe('cubeSummation', function() {
+  it ('function should not include beginning value', function() {
+    assert.equal(cubeSummation(5, 0), 225);
   })
-  it("does not lay the 5th reward package", function() {
-    assert.strictEqual(unpackSausages([["[IIII]", "[llll]", "[1111]", "[@@@@]", "[||||]", "[║║║║]"]]), "I I I I l l l l 1 1 1 1 @ @ @ @ ║ ║ ║ ║");
-  });
 })
+
+// const unpackSausages = require('../sausages');
+
+// describe('unpackSausages', function() {
+//   it('should sort the sausages', function() {
+//     assert.equal(unpackSausages([ [ "(-)", "[IIII]", "[))))]" ], [ "IuI", "[llll]" ], [ "[@@@@]", "UwU", "[IlII]" ], [ "IuI", "[))))]", "x" ], [] ]), "I I I I ) ) ) ) l l l l @ @ @ @");
+//   })
+//   it("does not lay the 5th reward package", function() {
+//     assert.strictEqual(unpackSausages([["[IIII]", "[llll]", "[1111]", "[@@@@]", "[||||]", "[║║║║]"]]), "I I I I l l l l 1 1 1 1 @ @ @ @ ║ ║ ║ ║");
+//   });
+// })
 
 // const nameSum = require('../authoredKata');
 
