@@ -1,13 +1,21 @@
 const assert = require('chai').assert;
 const expect = require('chai').expect;
 
-const cubeSummation = require('../cubeSummation');
+const sumOfMinimums = require('../sumOfMinimums');
 
-describe('cubeSummation', function() {
-  it ('function should not include beginning value', function() {
-    assert.equal(cubeSummation(5, 0), 225);
-  })
-})
+// describe('sumOfMinimums', function() {
+//   it ('function should find the minimum of each array', function() {
+//     assert.eq
+//   })
+// })
+
+// const cubeSummation = require('../cubeSummation');
+
+// describe('cubeSummation', function() {
+//   it ('function should not include beginning value', function() {
+//     assert.equal(cubeSummation(5, 0), 225);
+//   })
+// })
 
 // const unpackSausages = require('../sausages');
 
